@@ -6,7 +6,7 @@ author:
 - Jefferson Kirkland
 ---
 
-##Welcome, to the Geek Grimoire!
+Welcome, to the Geek Grimoire!
 
 I have been out of the blogging sphere for quite a while.  I've mostly been learning, reading and working.  Covid, while causing a whole lot of disruptions, also forced companies to allow working from home.  While there are a number of companies requiring workers to return, some, like where I work with a global team, have found that we work just as well, if not better, at home than in the office.  The WFH part also allows many of us to handle at-home things, that wouldn't have been possible to do while away in the office.  For me, at least, its been a very positive experience.
 
