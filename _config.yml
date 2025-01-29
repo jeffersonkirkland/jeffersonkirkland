@@ -1,6 +1,6 @@
 title: Geek Grimoire
-author: Jefferson Kirkland
-  name: jeffersonkirkland
+author:
+  name: Jefferson Kirkland
   email: numberwhun@gmail.com
 
 # The `>` after `description:` means to ignore line-breaks until next key.
