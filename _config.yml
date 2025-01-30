@@ -1,7 +1,6 @@
 title: Geek Grimoire
-author: Jefferson Kirkland
-  name: jeffersonkirkland
-  email: numberwhun@gmail.com
+author:
+  name: Jefferson Kirkland
 
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
