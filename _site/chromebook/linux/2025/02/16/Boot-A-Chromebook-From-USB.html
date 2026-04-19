@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Booting A Chromebook From USB | Geek Grimoire</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Booting A Chromebook From USB" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Intro" />
+<meta property="og:description" content="Intro" />
+<link rel="canonical" href="http://localhost:4000/chromebook/linux/2025/02/16/Boot-A-Chromebook-From-USB.html" />
+<meta property="og:url" content="http://localhost:4000/chromebook/linux/2025/02/16/Boot-A-Chromebook-From-USB.html" />
+<meta property="og:site_name" content="Geek Grimoire" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-02-16T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Booting A Chromebook From USB" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-02-16T00:00:00-05:00","datePublished":"2025-02-16T00:00:00-05:00","description":"Intro","headline":"Booting A Chromebook From USB","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/chromebook/linux/2025/02/16/Boot-A-Chromebook-From-USB.html"},"url":"http://localhost:4000/chromebook/linux/2025/02/16/Boot-A-Chromebook-From-USB.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Geek Grimoire" />
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Geek Grimoire</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Booting A Chromebook From USB</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2025-02-16T00:00:00-05:00" itemprop="datePublished">
+        2025-Feb-16
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Jefferson Kirkland</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="intro">Intro</h1>
+
+<p>First, a little backstory into why this post…</p>
+
+<p>I have an older, low-end Chromebook that has been sitting around gathering dust. Sure, I could probably put it on Facebook Marketplace and find a good home for it…. but the specs, ugh!!</p>
+
+<p>I turned it on, and logged into it to take a look around.  I was thinking about re-installing it with a distribution of Linux for systems with older or lower system specs, but I didn’t realize how low they were.  Dual cpu, fine. Ram only had 2gb. To be honest, that isn’t reasonable even for most of the low resource linux distributions out there.  Then the storage space was only 2gb.  Great for ChromeOS, as it allows you to store your files on Google drive, but not for standard linux.  With those low ram specs, getting the desktop running wouldn’t be a fun endeavor.</p>
+
+<p>I was going to use this as a computer for coding projects for the Arduino, but I have other laptops that can do the trick.  This thing just isn’t going to cut it and will probalby just donate it to Savers or something.</p>
+
+<p>Anywho, the reason for this posting was to let you know how you can boot your Chromebook from a USB drive, in order to install another operating system (like Linux).  So, I am going to, at least, provide you those details.</p>
+
+<h1 id="the-nitty-gritty">The Nitty Gritty</h1>
+
+<h2 id="turning-off-os-verification">Turning OFF OS Verification</h2>
+
+<p>Ok, so first thing you need to do is have a Chromebook and be logged into it.  At the desktop, hit ESC+REFRESH+POWER.  This will put you into recovery mode, which is where you want to be.  Now, you need to turn off OS Verification (ChromeOS likes to always verify that you are ONLY using ChromeOS).  Hit CRTL+D and then hit ENTER.</p>
+
+<p>Let the machine work, even though it doesn’t look like its doing anything.  It will reboot once.  Once it is done, it will be at the <strong>OS Verification</strong> screen.  At this point, you can either wait for 30 seconds, or hit <strong>CTRL-D</strong> to continue to the OS.  You will have to go through setup again.</p>
+
+<h2 id="setup-to-boot-from-usb">Setup To Boot From USB</h2>
+
+<p>Now you need to enable support for booting from USB.  Once you are back at the desktop, you will hit <strong>CRTL+ALT+F2</strong> (F2 will be the right arrow in the top row (-&gt;)) to bring up the console window.  You will now do the following:</p>
+
+<ol>
+  <li>At the prompt for login enter <strong>chronos</strong> and hit <strong>ENTER</strong></li>
+  <li>Type <strong>sudo bash</strong> and hit <strong>ENTER</strong></li>
+  <li>Type <strong>crossystem dev_boot_usb=1 dev_boot_legacy=1</strong> and hit <strong>ENTER</strong>
+(You may get an error about the <strong>dev_boot_legacy</strong> portion and will instead need to use <strong>dev_boot_altfw</strong>.  If so, do it again and use that instead, as instructed.</li>
+  <li>Type <strong>sudo reboot</strong></li>
+</ol>
+
+<p>Now, the system will reboot and will come back up and put you again at the <strong>OS Verification</strong> screen.  Hit <strong>CTRL+L</strong> to bring you to the legacy bios screen, where you can select your boot device.  Here you will choose the usb drive (assuming you have the usb drive with your alternate OS already inserted).</p>
+
+<h1 id="wrapping-it-up">Wrapping It Up</h1>
+
+<p>Hopefully that works for you.  I wish the Chromebook I have/had contained better spects, but that’s neithere here nor there.  I have other machines.  If you have one with better specs, I hope this helps you reclaim the machine from ChromeOS and give it more functionality.</p>
+
+
+  </div><a class="u-url" href="/chromebook/linux/2025/02/16/Boot-A-Chromebook-From-USB.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="http://localhost:4000/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+        <ul class="contact-list">
+          <li class="p-name">Jefferson Kirkland</li>
+          
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p>A place for all of the PFM I have learned over the years, and am still learning
+</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
