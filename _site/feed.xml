@@ -1,5 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-01-30T14:40:54-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Geek Grimoire</title><subtitle>A place for all of the PFM I have learned over the years, and am still learning
-</subtitle><author><name>Jefferson Kirkland</name></author><entry><title type="html">Welcome, To The Geek Grimoire!</title><link href="http://localhost:4000/intro/2025/01/29/Welcome-To-The-Geek-Grimoire.html" rel="alternate" type="text/html" title="Welcome, To The Geek Grimoire!" /><published>2025-01-29T00:00:00-05:00</published><updated>2025-01-29T00:00:00-05:00</updated><id>http://localhost:4000/intro/2025/01/29/Welcome-To-The-Geek-Grimoire</id><content type="html" xml:base="http://localhost:4000/intro/2025/01/29/Welcome-To-The-Geek-Grimoire.html"><![CDATA[<p>Welcome, to the Geek Grimoire!</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-02-16T22:11:14-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Geek Grimoire</title><subtitle>A place for all of the PFM I have learned over the years, and am still learning
+</subtitle><author><name>Jefferson Kirkland</name></author><entry><title type="html">Booting A Chromebook From USB</title><link href="http://localhost:4000/chromebook,linux/2025/02/16/Boot-A-Chromebook-From-USB.html" rel="alternate" type="text/html" title="Booting A Chromebook From USB" /><published>2025-02-16T00:00:00-05:00</published><updated>2025-02-16T00:00:00-05:00</updated><id>http://localhost:4000/chromebook,linux/2025/02/16/Boot-A-Chromebook-From-USB</id><content type="html" xml:base="http://localhost:4000/chromebook,linux/2025/02/16/Boot-A-Chromebook-From-USB.html"><![CDATA[<h1 id="intro">Intro</h1>
+
+<p>First, a little backstory into why this post…</p>
+
+<p>I have an older, low-end Chromebook that has been sitting around gathering dust. Sure, I could probably put it on Facebook Marketplace and find a good home for it…. but the specs, ugh!!</p>
+
+<p>I turned it on, and logged into it to take a look around.  I was thinking about re-installing it with a distribution of Linux for systems with older or lower system specs, but I didn’t realize how low they were.  Dual cpu, fine. Ram only had 2gb. To be honest, that isn’t reasonable even for most of the low resource linux distributions out there.  Then the storage space was only 2gb.  Great for ChromeOS, as it allows you to store your files on Google drive, but not for standard linux.  With those low ram specs, getting the desktop running wouldn’t be a fun endeavor.</p>
+
+<p>I was going to use this as a computer for coding projects for the Arduino, but I have other laptops that can do the trick.  This thing just isn’t going to cut it and will probalby just donate it to Savers or something.</p>
+
+<p>Anywho, the reason for this posting was to let you know how you can boot your Chromebook from a USB drive, in order to install another operating system (like Linux).  So, I am going to, at least, provide you those details.</p>
+
+<h1 id="the-nitty-gritty">The Nitty Gritty</h1>
+
+<h2 id="turning-off-os-verification">Turning OFF OS Verification</h2>
+
+<p>Ok, so first thing you need to do is have a Chromebook and be logged into it.  At the desktop, hit ESC+REFRESH+POWER.  This will put you into recovery mode, which is where you want to be.  Now, you need to turn off OS Verification (ChromeOS likes to always verify that you are ONLY using ChromeOS).  Hit CRTL+D and then hit ENTER.</p>
+
+<p>Let the machine work, even though it doesn’t look like its doing anything.  It will reboot once.  Once it is done, it will be at the <strong>OS Verification</strong> screen.  At this point, you can either wait for 30 seconds, or hit <strong>CTRL-D</strong> to continue to the OS.  You will have to go through setup again.</p>
+
+<h2 id="setup-to-boot-from-usb">Setup To Boot From USB</h2>
+
+<p>Now you need to enable support for booting from USB.  Once you are back at the desktop, you will hit <strong>CRTL+ALT+F2</strong> (F2 will be the right arrow in the top row (-&gt;)) to bring up the console window.  You will now do the following:</p>
+
+<ol>
+  <li>At the prompt for login enter <strong>chronos</strong> and hit <strong>ENTER</strong></li>
+  <li>Type <strong>sudo bash</strong> and hit <strong>ENTER</strong></li>
+  <li>Type <strong>crossystem dev_boot_usb=1 dev_boot_legacy=1</strong> and hit <strong>ENTER</strong>
+(You may get an error about the <strong>dev_boot_legacy</strong> portion and will instead need to use <strong>dev_boot_altfw</strong>.  If so, do it again and use that instead, as instructed.</li>
+  <li>Type <strong>sudo reboot</strong></li>
+</ol>
+
+<p>Now, the system will reboot and will come back up and put you again at the <strong>OS Verification</strong> screen.  Hit <strong>CTRL+L</strong> to bring you to the legacy bios screen, where you can select your boot device.  Here you will choose the usb drive (assuming you have the usb drive with your alternate OS already inserted).</p>
+
+<h1 id="wrapping-it-up">Wrapping It Up</h1>
+
+<p>Hopefully that works for you.  I wish the Chromebook I have/had contained better spects, but that’s neithere here nor there.  I have other machines.  If you have one with better specs, I hope this helps you reclaim the machine from ChromeOS and give it more functionality.</p>]]></content><author><name>[&quot;Jefferson Kirkland&quot;]</name></author><category term="chromebook,linux" /><summary type="html"><![CDATA[Intro]]></summary></entry><entry><title type="html">Welcome, To The Geek Grimoire!</title><link href="http://localhost:4000/intro/2025/01/29/Welcome-To-The-Geek-Grimoire.html" rel="alternate" type="text/html" title="Welcome, To The Geek Grimoire!" /><published>2025-01-29T00:00:00-05:00</published><updated>2025-01-29T00:00:00-05:00</updated><id>http://localhost:4000/intro/2025/01/29/Welcome-To-The-Geek-Grimoire</id><content type="html" xml:base="http://localhost:4000/intro/2025/01/29/Welcome-To-The-Geek-Grimoire.html"><![CDATA[<p>Welcome, to the Geek Grimoire!</p>
 
 <p>I have been out of the blogging sphere for quite a while.  I’ve mostly been learning, reading and working.  Covid, while causing a whole lot of disruptions, also forced companies to allow working from home.  While there are a number of companies requiring workers to return, some, like where I work with a global team, have found that we work just as well, if not better, at home than in the office.  The WFH part also allows many of us to handle at-home things, that wouldn’t have been possible to do while away in the office.  For me, at least, its been a very positive experience.</p>
 
@@ -12,4 +48,3 @@
 <p>Without further ado, let’s get to filling this Grimoire with information.</p>
 
 <p>Happy Geeking!</p>]]></content><author><name>[&quot;Jefferson Kirkland&quot;]</name></author><category term="intro" /><summary type="html"><![CDATA[Welcome, to the Geek Grimoire!]]></summary></entry></feed>
-

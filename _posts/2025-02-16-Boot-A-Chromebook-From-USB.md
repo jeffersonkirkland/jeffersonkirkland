@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "Booting A Chromebook From USB"
-categories: chromebook,linux
+categories: 
+  - chromebook
+  - linux
 author:
 - Jefferson Kirkland
 ---
